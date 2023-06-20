@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</h3>
+   
+   <script>
+      //Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+      //  price - ціна товару
+      // quantity  - кількість
+      // sum - загальна вартіть товару
+      // percent - відсоток від суми
+      // 
+      // 
+      // 
+      // 
+      //
+      // введення значень
+      let price = parseFloat(prompt('скільки Ви б заплатили за одного дохлого москаля?'))
+      let quantity = parseFloat(prompt('скільки дохлих москалів хотіли б?'))
+      
+
+      // обчислення
+      let  sum = price * quantity
+      let percent = sum / 100 * 5
+  
+      document.write(`За ${quantity} москалів Ви  заплатите ${sum}  і ${percent} грн ПДВ <br>`)
+
+      
+   </script>
+</body>
+</html>

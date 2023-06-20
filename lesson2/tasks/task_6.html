@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+   </h3>
+   
+   <script>
+      //З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість 
+      //кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи 
+      //елементи розмітки.
+
+      //  
+      // sweet -  кількість  солоденького
+      // costSweet -  ціна солоденького
+      // meat- кількість мяса
+      // costMeat - ціна за мясо
+      // water - кількість води
+      // costWater - кільість води
+      // sumSweet загальна вартість солодень4ого
+      // sumMeat -  загальна вартість мяса
+      // sumWater  загальна вартість води
+      // total - загальна вартість
+      // введення значень
+      let sweet = parseInt(prompt('скільки шоколаднидних батончиків хочете купити?'))
+      let costSweet = parseFloat(prompt('скільки за них заплатили б?'))
+
+      let meat = parseInt(prompt('скільки мясних виробів хочете купити?'))
+      let costMeat = parseFloat(prompt('скільки за них заплатили б?'))
+      
+      let tomato = parseInt(prompt('скільки пляшок води хочете купити?'))
+      let costTomato = parseFloat(prompt('скільки за них заплатили б?'))
+
+
+      // обчислення
+     
+      let sumSweet = sweet * costSweet
+      let sumMeat = meat * costMeat
+      let sumTomato =tomato * costTomato
+
+      let total = sumSweet + sumMeat + sumTomato
+  
+      document.write(`<h3> Шоколадні батончики  ${sweet}  -  ${sumSweet} грн <br></h3>`)
+      document.write(` <h3>Мʼясні вироби  ${meat}  -  ${sumMeat} грн <br></h3>`)
+      document.write(`<h3> Помідори ${tomato} -  ${sumTomato } грн <br></h3>`)
+      document.write(` <h3>Усього  -  ${total} грн <br>`)
+      
+   </script>
+</body>
+</html>
