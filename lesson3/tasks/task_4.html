@@ -22,17 +22,17 @@
       
 
       // обчислення
-     if (age >= 0  &&  age < 1) 
-      alert ('немовля')
+     if (age < 1 && age > 100)
+      alert ('некоректно введений вік')
       else if(age >= 1 && age <= 6)
       alert ('дитина в садочку')
-      else if (age >= 7 && age <= 17) 
+      else if ( age <= 17) 
       alert ('школяр')
-      else if (age >= 18 && age <= 22) 
+      else if (age <= 22) 
       alert ('студент')
-      else if (age >= 23 && age <= 59) 
+      else if (age <= 64) 
       alert ('працівник')
-      else if (age >= 60) 
+      else if (age >= 65) 
       alert ('пенсіонер')
    </script>
 </body>
