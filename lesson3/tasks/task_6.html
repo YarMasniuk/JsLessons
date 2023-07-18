@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+   </h3>
+   
+   <script>
+      //З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.
+
+      //  
+      // 1 - понеділок
+      // 2 - вівторок
+      // 3 - середа
+      //4 - четвер
+      // 5 - пятниця
+      // 6 - субота
+      // 7 - неділя
+    // введення значень
+      
+
+      let numDay = parseInt(prompt('введіть число тижня'))
+      let resul 
+      
+
+      // обчислення
+     
+      switch (numDay) {
+         case 1: resul = 'понеділок'
+             break;
+         case 2: resul = 'вівторок'
+             break;   
+         case 3: resul = 'середа'
+             break; 
+         case 4: resul = 'четвер'
+             break;   
+         case 5: resul = 'пятниця'
+             break;
+         case 6: resul = 'субота'
+             break;   
+         case 7: resul = 'неділя'
+             break;     
+         default: resul = 'такого дня тижня не існує'
+            break;
+      }
+    alert(resul)  
+   </script>
+</body>
+</html>

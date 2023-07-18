@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</h3>
+   <script>
+      //
+      //  minNum - 1
+      // maxNum  - 5
+      // oneNum - перше введене число
+      // twoNum - друге введене число
+      // 
+      // 
+      // 
+      // 
+      //
+      // введення значень
+      let oneNum = parseInt(prompt('введіть число від 1 до 5'))
+      let twoNum = parseInt(prompt('введіть число від 1 до 5'))
+      let minNum = 1
+      let maxNum = 5
+      // обчислення
+      
+      let random=  minNum+  Math.floor(Math.random() *(maxNum-minNum+1))
+       
+      if (oneNum === random || twoNum === random)
+      alert('Ви вгадали')
+      else if ((oneNum > 5 || oneNum < 0) || (twoNum > 5 || twoNum < 0) )
+      alert ( 'некоректне число, введіть від 1 до 5')
+      else
+      alert('Ви не вгадали')
+      alert(`рандомне число - ${random}`)
+   </script>
+</body>
+</html>

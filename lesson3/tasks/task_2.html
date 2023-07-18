@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.</h3>
+   
+   <script>
+      //
+      //  price - ціна товару
+      // money - гроші
+      // tiket - лотерейний квиток
+      // 
+      // 
+      // 
+      // 
+      // 
+      //
+      // введення значень
+      let price = parseFloat(prompt('яка ціна товару?'))
+      let money = parseInt(prompt('скільки грошей Ви маєте?'))
+      
+
+      // обчислення
+      if (price > money)
+      alert( "Ви не можете здійснити покупку, недостатньо коштів") 
+      else if (money > price + 4)
+      alert( "Бажаєте купити лотерею за 4 гривні?") 
+      else 
+      alert( "дякуєм за покупку") 
+
+      
+   </script>
+</body>
+</html>
