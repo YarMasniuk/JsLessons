@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел вводиться користувачем. </h3>
+   <script>
+      //
+     
+      // 
+      // 
+      // 
+      // 
+      //
+      // введення значень
+      let minNum = 1
+      let maxNum = 100
+      // обчислення
+      let userNum = parseFloat(prompt('введіть яку кількість випадково згенерованих чисел Ви хотіли б вивести на екран'))
+      for(let i = 0;  i < userNum; i++ ){
+      let random=  minNum+  Math.floor(Math.random() *(maxNum-minNum+1))
+          document.write(`<ul> <li>${random}</li></ul>`)
+      }
+   </script>
+</body>
+</html>

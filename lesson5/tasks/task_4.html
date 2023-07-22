@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).</h3>
+   
+   <script>
+      //
+      // 
+   
+      // 
+      // 
+      //
+      
+      
+   let userNum = parseInt(prompt('загадайте ціле число від 1 до 30'))
+   let minNum = 1
+   let maxNum = 30
+      while (minNum !== maxNum) {
+       let middle =  Math.round((maxNum - minNum) / 2) + minNum
+      if (middle === minNum || middle === maxNum ){
+          let middConfirm = confirm(`чи загадане число це ${maxNum}`)
+          if(middConfirm ) {
+            break
+          } else {
+            maxNum = minNum 
+            break
+          }
+      }       
+       let conf = confirm(`${minNum} ${maxNum} Чи загадане число більше ${middle}`)
+       if(conf) 
+          minNum = middle
+       else 
+          maxNum = middle
+      }
+      alert(`компютер вгадав ${maxNum}`)
+      // обчислення
+
+   </script>
+</body>
+</html>

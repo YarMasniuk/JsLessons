@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>  Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів користувач намагається потопити корабель. 
+   </h3>
+   
+   <script>
+      //
+
+      //  
+    
+    // введення значень
+      
+      let minNumX = 1
+      let  maxNumX= parseInt(prompt('Вас вітає гра Морський бій. Для того щоб пограти введіть кількість клітинок по осі X'))
+      let randomX=  minNumX + Math.floor(Math.random() *(maxNumX-minNumX+1))
+      let minNumY = 1
+      let maxNumY = parseInt(prompt('Введіть кількість клітинок по осі X'))
+      let randomY=  minNumY + Math.floor(Math.random() *(maxNumY-minNumY+1))
+      let shots = parseInt(prompt('Введіть кількість  спроб пострілів'))
+
+      // обчислення
+      for (let i = 1; i <= shots; i++) {
+          let shotX = parseInt(prompt('перший постріл по Х'))
+          let shotY = parseInt(prompt('перший постріл по Х'))
+
+          if (randomX === shotX && shotY === randomY) {
+          alert('Корабель потоплено')
+          break
+          }
+          else 
+          alert(`спроба не вдалась,`)
+      }
+      alert(`корабель був розташований по координатах X - ${randomX}, Y - ${randomY}`)
+        
+   </script>
+</body>
+</html>
