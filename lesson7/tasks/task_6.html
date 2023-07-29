@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3> Створити окремі функції, які переводять:
+      Сантиметри у дюйми;
+      Кілограми у фунти;
+      Кілометри у милі.
+       
+   </h3>
+   
+   <script>
+      //
+
+      //  
+      function getInches (centimeters) {
+        let inches = centimeters * 0.39
+        return inches
+  }
+
+  let centimeters = parseFloat(prompt('введіть величину для прерводу з сантиметрів у дюйми'))
+
+   alert(`${centimeters} сантимтрів має ${getInches(centimeters).toFixed(2)} дюймів`)
+
+    
+
+   function getPounds (kilograms) {
+        let pounds = kilograms * 2.20
+        return pounds
+  }
+
+  let kilograms = parseFloat(prompt('введіть величину для прерводу з кілометрів у фунти'))
+
+   alert(`${kilograms} кілометрів має ${getPounds(kilograms).toFixed(2)} фунтів`)
+
+
+   function getPounds (kilometers) {
+        let miles = kilometers * 0.62
+        return miles
+  }
+
+  let kilometers = parseFloat(prompt('введіть величину для прерводу з кілометрів у милі'))
+
+   alert(`${kilometers} кілометрів має ${getPounds(kilometers).toFixed(2)} милів`)
+
+        
+   </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення для додатних показів температури.</h1>
+   <script>
+   function getTemperature(rendom) {
+         let result = 0
+         let sum = 0
+         for (let i = 0; i < 30; i++) {
+            let rendom =  min+  Math.floor(Math.random() *(max-min+1))
+         console.log(rendom)
+         if (rendom > 0) {
+          result++
+          console.log(result)
+           sum += rendom
+           console.log(sum)
+         }
+           }
+
+      return Math.floor(sum / result)
+      }
+
+      let min = -5
+      let max = 10
+
+      let rendom =  min+  Math.round(Math.random() *(max-min+1))
+
+      alert(`середнє значення додатніх показників - ${getTemperature(rendom)}`)
+
+   </script>
+</body>
+</html>
