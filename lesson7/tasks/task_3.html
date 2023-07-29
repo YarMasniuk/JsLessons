@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим. </h3>
+   <script>
+      //
+     
+      // 
+      // 
+      // 
+      // 
+      //
+      // введення значень
+      function getDayNum(numDay) {
+       let result
+       switch (numDay) {
+          case 1 : 
+               
+          case 2 : 
+          case 3 : 
+          case 4 : 
+          case 5 : result = 'робочий день'
+               break;
+          case 6 : 
+          case 7 : result = 'вихідний'
+               break;
+          
+          default: result = 'такого дня не існує'
+             break;
+       }
+           return result
+      }
+      
+      let day = parseInt(prompt('введіть номер дня'))
+   alert(getDayNum(day))
+
+   </script>
+</body>
+</html>

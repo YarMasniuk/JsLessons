@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3>Створити окремі функції, які для 4 чисел знаходять:
+      1 - суму;
+      2 - добуток;
+      3- середнє арифметичне;
+      4 - мінімальне значення. 
+      </h3>
+   
+   <script>
+      //
+      // 
+   
+      // 
+      // 
+      //
+      
+      
+  let getSum  = (num1, num2, num3, num4)  => num1 + num3 + num3 + num4
+  
+
+       
+  let getProduct  = (num1, num2, num3, num4) =>  num1 * num3 * num3 * num4
+  
+  function getAverage (num1, num2, num3, num4) {
+     return (num1 + num3 + num3 + num4) / 4
+  }
+  function getMinNum (num1, num2, num3, num4) {
+     let minNum = num1
+     if ( minNum >  num2) 
+        minNum = num2
+      else if (minNum > num3)
+      minNum = num3
+      else if (minNum > num4)
+      minNum = num4
+     
+      return  minNum 
+  }
+
+  let num1 = parseInt(prompt('введіть числа'))
+  let num2 = parseInt(prompt('введіть числа'))
+  let num3 = parseInt(prompt('введіть числа'))
+  let num4 = parseInt(prompt('введіть числа'))
+   alert(`Сума - ${getSum(num1, num2, num3, num4)}`)
+   alert(`Добуток - ${getProduct(num1, num2, num3, num4)}`)
+   alert(`Середнє арифметичне - ${getAverage(num1, num2, num3, num4)}`)
+   alert(`Мінімальне значення - ${getMinNum (num1, num2, num3, num4)}`)
+   </script>
+</body>
+</html>

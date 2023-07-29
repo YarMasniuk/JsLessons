@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>task-0</title>
+</head>
+<body>
+   <h3> ССтворити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у функцію).
+       
+   </h3>
+   
+   
+   <script>
+      //
+
+      //  
+
+      function getImg(imgNum) {
+        
+        document.write (`<img src="../img/img${imgNum}.jpg">`)
+        
+      }
+  
+       let min = 1
+       let max = 4
+
+       let rendom =  min+  Math.floor(Math.random() *(max-min+1))
+     
+
+       getImg(rendom)
+
+        
+   </script>
+</body>
+</html>
