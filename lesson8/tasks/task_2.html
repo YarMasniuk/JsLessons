@@ -25,24 +25,21 @@
       //
       //
       // введення значень
-      function getArray(array) {
-        let arrayNum20 = [];
 
-        let sumWork = 0;
-        let sumDayOff = 0;
+      function get20Visitors(array) {
+        let arrayNum20 = [];
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] < 20) arrayNum20.push(i + 1);
+        }
+        return arrayNum20;
+      }
+
+      function getMinVisitors(array) {
         let min = array[0];
         let minIndex = 1;
         let min2 = array[0];
         let minIndex2 = 1;
-        let max = array[0];
-        let maxIndex = 1;
-        let max2 = array[0];
-        let maxIndex2 = 1;
-
-        for (let i = 0; i < array.length; i++) {
-          if (array[i] < 20) arrayNum20.push(i + 1);
-          console.log(arrayNum20);
-        }
+        let minArray = [];
 
         for (let j = 1; j < array.length; j++) {
           if (array[j] < min) {
@@ -54,7 +51,19 @@
             min2 = array[j];
             minIndex2 = j + 1;
           }
+        }
+        minArray.push(minIndex);
+        minArray.push(minIndex2);
+        return minArray;
+      }
 
+      function getMaxVisitors(array) {
+        let max = array[0];
+        let maxIndex = 1;
+        let max2 = array[0];
+        let maxIndex2 = 1;
+        let maxArray = [];
+        for (let j = 1; j < array.length; j++) {
           if (array[j] > max) {
             max = array[j];
             maxIndex = j + 1;
@@ -65,25 +74,37 @@
             maxIndex2 = j + 1;
           }
         }
-        for (let a = 0; a < 5; a++) {
-          sumWork = sumWork + array[a];
-          console.log(sumWork);
+        maxArray.push(maxIndex);
+        maxArray.push(maxIndex2);
+        return maxArray;
+      }
+
+      function getDayVisitors(array) {
+        let sumWork = 0;
+
+        for (let i = 0; i < 5; i++) {
+          sumWork = sumWork + array[i];
         }
-        for (let c = 5; c < 7; c++) {
-          sumDayOff = sumDayOff+array[c];
+        return sumWork;
+      }
+
+      function getDayOffVisitors(array) {
+        let sumDayOff = 0;
+        for (let i = 5; i < 7; i++) {
+          sumDayOff = sumDayOff + array[i];
         }
 
-        return `за тиждень в магазині було  менше 20 людей таких днів - ${arrayNum20}, 
-        найменша тількість людей була ${minIndex},${minIndex2} дня, 
-        найбільша кількість людей була ${maxIndex},${maxIndex2} дня
-        в робочі дні було ${sumWork} людей,
-        в вихідні дні було ${sumDayOff} людей`;
+        return sumDayOff;
       }
 
       let array = [4, 20, 29, 80, 30, 2, 70];
-      alert(array);
 
-      let fun = getArray(array);
+      let fun = `за тиждень в магазині було  менше 20 людей таких днів - ${get20Visitors(
+        array
+      )} найменша тількість людей була ${getMinVisitors(array)} дня,
+     найбільша кількість людей була ${getMaxVisitors(array)}, дня
+     в робочі дні було ${getDayVisitors(array)} людей,
+      в вихідні дні було ${getDayOffVisitors(array)} людей`;
       alert(fun);
     </script>
   </body>
