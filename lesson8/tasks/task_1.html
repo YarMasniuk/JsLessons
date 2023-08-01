@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3></h3>
+
+    <script>
+      //   Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься
+      // (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).
+      //
+      //
+      //
+
+      //
+      //
+      // введення значень
+      function getArrayAssessment(countAssessment) {
+        let arry = [];
+        for (let i = 0; i < countAssessment; i++) {
+          let currentAssessment = parseInt(
+            prompt(`введіть оцінку за  ${i + 1} предмет`)
+          );
+          if (currentAssessment < 1 || currentAssessment > 5) {
+            alert("Ви ввели не коректну оцінку");
+            return;
+          }
+          arry.push(currentAssessment);
+        }
+
+        return arry;
+      }
+
+      function getLevelStudent(assessment, countAssessment) {
+        let level;
+        let min = assessment[0];
+        let sum = assessment[0];
+        for (let i = 1; i < assessment.length; i++) {
+          sum += assessment[i];
+          if (min > assessment[i]) min = assessment[i];
+        }
+        let res = sum / countAssessment;
+
+        switch (min) {
+          case 1:
+          case 2:
+            level = "двійочник";
+            break;
+          case 3:
+            level = "трійочник";
+            break;
+          case 4:
+            level = "хорошист";
+            break;
+          case 5:
+            level = "відмінник";
+            break;
+        }
+        return `середній бал ${res.toFixed(1)} i учень відноситься до категорії ${level}`;
+      }
+
+      let countAssessment = parseInt(
+        prompt("введіть загальну кількість оцінок")
+      );
+      let fullArry = getArrayAssessment(countAssessment);
+
+      let certificate = getLevelStudent(fullArry, countAssessment);
+      alert(certificate);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3>
+      Дано одновимірний масив, у якому зберігається певна виграшна сума
+      (елементи заповнюються випадковим чином значеннями від -500 до 500).
+      Надаючи користувачу можливість вибирати номери елементів (поки він не
+      відмовиться). Знаходити сумарний виграш.
+    </h3>
+
+    <script>
+      //
+
+      //
+      //
+      //
+
+      function getRendom() {
+        let arry = [];
+
+        let minNum = -500;
+        let maxNum = 500;
+        for (let i = 0; i < 20; i++) {
+          let random =
+            minNum + Math.floor(Math.random() * (maxNum - minNum + 1));
+          arry.push(random);
+        }
+        return arry;
+      }
+      function getSum(fun) {
+        let sum = 0;
+
+        for (let i = 0; ; i++) {
+          let choice = parseInt(prompt("введіть число від 1 до 20"));
+          sum = sum + fun[choice - 1];
+          let conf = confirm(`Ваш вибір ${fun[choice - 1]} сума складає ${sum}
+          Бажаєте зробити ще вибір?`);
+          if (conf == false) {
+            break;
+          }
+        }
+        return sum;
+      }
+      let fun = getRendom();
+      let fun2 = getSum(fun);
+
+      if (fun2 > 0) alert(`Ваша сума складає${fun2}, Вітаю Ви виграли`);
+      else if (fun2 < 0)
+        alert(
+          `Ваша сума складає${fun2}, Ви програми, будь ласка скиньте програну суму на номер карти - 4149 6794 6789 367`
+        );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3>
+      Дано послідовність цін товарів та назв (у окремих масивах). Вивести на
+      екран ті, які може собі дозволити користувач (кількість грошей задається).
+    </h3>
+
+    <script>
+      //
+      //
+
+      //
+      //
+      //
+
+      function getStuff(sum, arrayPrice, arrayStuff) {
+        let arrayBuy = [];
+        for (let i = 0; i < arrayPrice.length; i++) {
+          if (sum >= arrayPrice[i]) {
+            arrayBuy.push(arrayStuff[i]);
+          }
+        }
+        return arrayBuy.length === 0
+          ? "ви не можете купити жодного товару"
+          : ` ви можете купити такі товари - ${arrayBuy}`;
+      }
+      let sumUser = parseFloat(prompt("введуть скільки у Вас є грошей"));
+      let arrayPrice = [300, 400, 50, 800, 1500, 300, 900, 1800, 3000];
+      let arrayStuff = [
+        "молоток",
+        "мишка",
+        "кава",
+        "крем",
+        "постільна білизна",
+        "помідори",
+        "дрелька",
+        "сумочка",
+      ];
+      alert(getStuff(sumUser, arrayPrice, arrayStuff));
+    </script>
+  </body>
+</html>

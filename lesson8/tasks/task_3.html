@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3>
+      Задача 3. Дано масив імен учнів. З’ясувати скільки разів зустрічається
+      ім’я «Іван».
+    </h3>
+    <script>
+      //
+
+      //
+      //
+      //
+      //
+      //
+      // введення значень
+      function getNameStudents(arrayStudents) {
+        let counter = 0;
+        for (let i = 0; i < arrayStudents.length; i++) {
+          if (arrayStudents[i] === "Іван") 
+          counter++;
+        }
+
+        return counter;
+      }
+
+      let arrayStudents = ['Василь', 'Петро', 'Іван','Данило','Михайло','Іван','Володимир','Іван','Тарас'];
+
+      let res = getNameStudents(arrayStudents);
+      alert(res);
+    </script>
+  </body>
+</html>

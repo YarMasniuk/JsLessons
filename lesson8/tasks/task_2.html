@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3>
+      Дано масив, який зберігає кількість відвідувачів магазину протягом тижня.
+      Вивести на екран: - номери днів, протягом яких кількість відвідувачів була
+      меншою за 20; - номери днів, коли кількість відвідувачів була мінімальною;
+      - номери днів, коли кількість відвідувачів була мінімальною; - загальну
+      кількість клієнтів у робочі дні та окремо загальну кількість днів на
+      вихідних.
+    </h3>
+
+    <script>
+      //
+      //
+      //
+      //
+      //
+      //
+      //
+      // введення значень
+      function getArray(array) {
+        let arrayNum20 = [];
+
+        let sumWork = 0;
+        let sumDayOff = 0;
+        let min = array[0];
+        let minIndex = 1;
+        let min2 = array[0];
+        let minIndex2 = 1;
+        let max = array[0];
+        let maxIndex = 1;
+        let max2 = array[0];
+        let maxIndex2 = 1;
+
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] < 20) arrayNum20.push(i + 1);
+          console.log(arrayNum20);
+        }
+
+        for (let j = 1; j < array.length; j++) {
+          if (array[j] < min) {
+            min = array[j];
+            minIndex = j + 1;
+          }
+
+          if (array[j] < min2 && array[j] !== min) {
+            min2 = array[j];
+            minIndex2 = j + 1;
+          }
+
+          if (array[j] > max) {
+            max = array[j];
+            maxIndex = j + 1;
+          }
+
+          if (array[j] > max2 && array[j] !== max) {
+            max2 = array[j];
+            maxIndex2 = j + 1;
+          }
+        }
+        for (let a = 0; a < 5; a++) {
+          sumWork = sumWork + array[a];
+          console.log(sumWork);
+        }
+        for (let c = 5; c < 7; c++) {
+          sumDayOff = sumDayOff+array[c];
+        }
+
+        return `за тиждень в магазині було  менше 20 людей таких днів - ${arrayNum20}, 
+        найменша тількість людей була ${minIndex},${minIndex2} дня, 
+        найбільша кількість людей була ${maxIndex},${maxIndex2} дня
+        в робочі дні було ${sumWork} людей,
+        в вихідні дні було ${sumDayOff} людей`;
+      }
+
+      let array = [4, 20, 29, 80, 30, 2, 70];
+      alert(array);
+
+      let fun = getArray(array);
+      alert(fun);
+    </script>
+  </body>
+</html>
