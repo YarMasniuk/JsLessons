@@ -38,7 +38,14 @@
 
         for (let i = 0; ; i++) {
           let choice = parseInt(prompt("введіть число від 1 до 20"));
-          sum = sum + fun[choice - 1];
+          if (Number.isFinite(choice) && choice < 21 && choice > 0)
+            sum = sum + fun[choice - 1];
+          else {
+            alert(
+              "не коректні данні, спробуйте ввести корекні данні і почати спочатку"
+            );
+            continue;
+          }
           let conf = confirm(`Ваш вибір ${fun[choice - 1]} сума складає ${sum}
           Бажаєте зробити ще вибір?`);
           if (conf == false) {
