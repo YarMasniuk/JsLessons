@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3>
+      Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде
+      містити величину сплаченого податку у грн.
+    </h3>
+    <script>
+      //
+
+      //
+      //
+      //
+      let arrPrice = [2000, 5000, 500, 10000, 780, 3600, 1900];
+      let arrTax = [];
+
+      arrPrice.forEach((element) => {
+        arrTax.push((element * 20) / 100);
+      });
+      document.write(arrTax);
+    </script>
+  </body>
+</html>

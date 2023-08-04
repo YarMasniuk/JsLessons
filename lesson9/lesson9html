@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="null.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div>Masniuk Yaroslava</div>
+        <a href="#lessons" class="title">LESSONS №9</a>
+      </header>
+      <main class="main">
+        <div class="container">
+          <ul id="lessons" class="list">
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_1.html">
+                <div class="name">Task 1</div>
+                <div class="condition">
+                  Користувач вводить кількість елементів. Створити масив, що
+                  складається з вказаної кількості елементів заповнених нулями.
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_2.html">
+                <div class="name">Task 2</div>
+                <div class="condition">
+                  Користувач вводить кількість елементів. Створити масив, у
+                  якому перша половина заповнена 1-цями, а друга заповнена
+                  7-ками.
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_3.html">
+                <div class="name">Task 3</div>
+                <div class="condition">
+                  Користувач вводить кількість елементів. Створити масив, у
+                  якому перші 5 елементів заповнені 1-цями, а інші до кінця
+                  масиву заповнені 7-ками.
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_4.html">
+                <div class="name">Task 4</div>
+                <div class="condition">
+                  Дано масив елементів. Вивести на екран елементи, що більші за
+                  100
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_5.html">
+                <div class="name">Task 5</div>
+                <div class="condition">
+                  Дано масив елементів. Знайти добуток додатних елементів
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_5.html">
+                <div class="name">Task 6</div>
+                <div class="condition">
+                  Дано масив елементів. Усі елементи, які більші за перший елемент помножити на 2
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_5.html">
+                <div class="name">Task 7</div>
+                <div class="condition">
+                  Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_5.html">
+                <div class="name">Task 8</div>
+                <div class="condition">
+                  Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_5.html">
+                <div class="name">Task 9</div>
+                <div class="condition">
+                  Дано масив імен. Сформувати масив з перших літер цих імен.
+
+                </div>
+              </a>
+            </li>
+            <li class="item">
+              <a class="link" target="_blank" href="tasks/task_5.html">
+                <div class="name">Task 10</div>
+                <div class="condition">
+                  Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого податку у грн.
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">Thank You for Your Feedback</footer>
+    </div>
+  </body>
+</html>
