@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-0</title>
+  </head>
+  <body>
+    <h3>
+      Дано історію цін на цінні папери за деякий період (згенерувати від 1 до
+      10000) Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.
+    </h3>
+
+    <script>
+      //
+      //
+      //
+      //
+      //
+
+      //
+      //
+      // введення значень
+      let minNum = 1;
+      let maxNum = 10000;
+      let arrRandom = [];
+      // обчислення
+      for (let i = 0; i < 10; i++) {
+        let random = minNum + Math.floor(Math.random() * (maxNum - minNum + 1));
+        arrRandom.push(random);
+      }
+      document.write(`Початковий масив <br>${arrRandom}`);
+      //.....................1..........................................
+      const newArr = arrRandom.filter((el) => el > 1000);
+      document.write(
+        `<h3>Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.</h3>${newArr}<br>`
+      );
+      //.....................2..........................................
+      const newArr2 = arrRandom.reduce((prev, el, index) => {
+        if (el > 1000) prev.push(index);
+        return prev;
+      }, []);
+      document.write(
+        `<h3>Сформувати новий масив, у якому є номери тільки тих, що більші за 1000 грн.</h3>${newArr2}<br>`
+      );
+
+      //.....................3..........................................
+
+      const maxPrev = arrRandom.filter(
+        (el, i, arr) => el > arr[i - 1] && i > 0
+      );
+      document.write(
+        `<h3> Сформувати список з тих цін, які більші за попереднє значення.</h3>${maxPrev}<br>`
+      );
+      //.....................4...............................................
+      const maxNums = Math.max(...arrRandom);
+      const findPersent = arrRandom.map((el) => (el * 100) / maxNums);
+
+      const fixArr = findPersent.map((el) => el.toFixed());
+      document.write(
+        `<h3>Сформувати новий масив, що міститиме значення цін у відсотках стосовно максимального</h3>${fixArr.join(
+          "%, "
+        )}%.<br>`
+      );
+      //.....................5...............................................
+      let count = 0;
+      const changePrice = arrRandom.reduce((prev, el) => {
+        if (el != prev) count++;
+      });
+      document.write(`<h3>Підрахувати кількість змін цін</h3>${count}<br>`);
+
+      //.....................6...............................................
+
+      if (arrRandom.some((el) => el < 1000))
+        document.write("<h3>Визначити, чи є ціна, що менше 1000 - Так</h3>");
+      else document.write("<h3>Визначити, чи є ціна, що менше 1000 - Ні</h3>");
+
+      //.....................7...............................................
+
+      if (arrRandom.every((el) => el < 1000))
+        document.write("<h3>Визначати, чи усі ціни більше за 1000 - Так</h3>");
+      else
+        document.write("<h3>Визначати, чи усі ціни більше за 1000 - Ні</h3>");
+
+      //.....................8...............................................
+
+      let countMore100 = 0;
+      const countMore = arrRandom.map((el) => {
+        if (el > 1000) return countMore100++;
+      }, 0);
+
+      document.write(
+        `<h3>Підрахувати кількість цін, що більше за 1000</h3>${countMore100}<br>`
+      );
+
+      //.....................9...............................................
+
+      const sumMore = arrRandom.reduce((prev, el) => {
+        if (el > 1000) prev += el;
+        return prev;
+      }, 0);
+      document.write(
+        `<h3>Підрахувати суму цін, що більше за 1000</h3>${sumMore}<br>`
+      );
+
+      //.....................10...............................................
+
+      const firstMorePrice = arrRandom.find((el) => el > 1000);
+      document.write(
+        `<h3>Знайти першу ціну, що більше за 1000</h3>${firstMorePrice}<br>`
+      );
+
+      //.....................11...............................................
+
+      const firstMorePriceIndex = arrRandom.findIndex((el) => el > 1000);
+      document.write(
+        `<h3>Знайти індекс першої ціни, що більше за 1000
+</h3>${firstMorePriceIndex}<br>`
+      );
+      //.....................12...............................................
+
+      const lastMorePrice = arrRandom.findLast((el) => el > 1000);
+      document.write(
+        `<h3>Знайти останню ціну, що більше за 1000</h3>${lastMorePrice}<br>`
+      );
+
+      //.....................13...............................................
+
+      const lastMorePriceIndex = arrRandom.findLastIndex((el) => el > 1000);
+      document.write(
+        `<h3>Знайти індекс останньої ціни, що більше за 1000</h3>${lastMorePriceIndex}<br>`
+      );
+    </script>
+  </body>
+</html>
